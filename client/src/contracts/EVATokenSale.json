@@ -1,0 +1,1640 @@
+{
+  "contractName": "EVATokenSale",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "rate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "contract KycContract",
+          "name": "_kyc",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "purchaser",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokensPurchased",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        }
+      ],
+      "name": "buyTokens",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wallet",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "weiRaised",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"wallet\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"contract KycContract\",\"name\":\"_kyc\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"purchaser\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TokensPurchased\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"buyTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wallet\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"weiRaised\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{\"buyTokens(address)\":{\"details\":\"low level token purchase ***DO NOT OVERRIDE*** This function has a non-reentrancy guard, so it shouldn't be called by another `nonReentrant` function.\",\"params\":{\"beneficiary\":\"Recipient of the token purchase\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/EVATokenSale.sol\":\"EVATokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x0de74dfa6b37943c1b834cbd8fb7a8d052e5ff80c7adb33692102dd6cd2985e9\",\"urls\":[\"bzz-raw://9d2d827fcf4a838f5821732c0acd6a40d21c2a5a2cfe2563feec91465f47bb60\",\"dweb:/ipfs/Qmex3wMKf5Sghbfvr288RUg1kP2uAyTMf11w83WbMbpQQc\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x9a8c691b81a4a48adbbd5b010faa56a168c189e711495c16347d93b60b805f82\",\"urls\":[\"bzz-raw://d951d626ed7bfe1a2d7a6bd4af315ff8691929bd567594d6ab53599fe9e17e4e\",\"dweb:/ipfs/QmYkGeowpa6Bjr9aaDirWdDo7hSfShzzZhanKC4nTfRhLj\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x04d34b3cd5677bea25f8dfceb6dec0eaa071d4d4b789a43f13fe0c415ba4c296\",\"urls\":[\"bzz-raw://e7e8b526a6839e5ba14f0d23a830387fec47f7043ce01d42c9f285b709a9d080\",\"dweb:/ipfs/QmXmhhFmX5gcAvVzNiDPAGA35iHMPNaYtQkACswRHBVTNw\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x3211de52f707a62a356a34fdea9d6a7bed46402d5ce45f1891a16fe2132fbb47\",\"urls\":[\"bzz-raw://45dfe794ad43a3674fab38a378c57eb6ed3353949f6529ccad4a4cbc91d45fc5\",\"dweb:/ipfs/QmReFGciE9fgsb6Nas1Fx593pzKWMjaDa1VQg4CEJQaD6U\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x6cc1cb934a3ac2137a7dcaed018af9e235392236ceecfd3687259702b9c767ad\",\"urls\":[\"bzz-raw://0055fa88138cd1c3c6440370f8580f85857f8fe9dec41c99af9eafbeb8d9c3ce\",\"dweb:/ipfs/QmX1xDh8vwGLLCH8ti45eXjQ7Wcxv1FEGTR3jkFnd5Nv6F\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xa27d8d0bf389702f2b124fff3d86238b17ec0abd47d1401e81dc48a1509dbb9a\",\"urls\":[\"bzz-raw://899c25b79e783c1e4ccdd06928e332e2b37f3ecaa487f49ef68ef9fde6b18f82\",\"dweb:/ipfs/QmV3rZDWabetVSmZ2iviS5tajKzvR3AEwsicKZao4ptTg2\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x5f7da58ee3d9faa9b8999a93d49c8ff978f1afc88ae9bcfc6f9cbb44da011c2b\",\"urls\":[\"bzz-raw://4f089d954b3ecaa26949412fe63e9a184b056562c6c13dd4a0529a5d9a2e685a\",\"dweb:/ipfs/QmVK5iCNAMcEJQxT59bsC5E53JQASDQPU6khHox3d5ZXCn\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x5cc574fb09fe4a5f96228ee3af85d268aae6e0b91fc0f2f90b08e9b207bfefd5\",\"urls\":[\"bzz-raw://9e043d364d848bedcafab010a00bb8069b4719a447cd5cf41be4f2993d8e9fc5\",\"dweb:/ipfs/QmPdecjvQJvjxcEH8jd2vuKxKhBWbUu9qLft4kfKz96eR3\"]},\"project:/contracts/Crowdsale.sol\":{\"keccak256\":\"0x27501a59aeefabe6b86fe8a11d980f57f58f70872c1d212a674bef6b7fe6e986\",\"urls\":[\"bzz-raw://d6e1dd2e2f22d43739cbd094ec5d97b35c675d3ba49b4a6b11dc53177078775b\",\"dweb:/ipfs/QmUYQAseVhCHQEpPG5WA8nUPdzbFpFdEGoLYV2HPC3fULY\"]},\"project:/contracts/ERC20Mintable.sol\":{\"keccak256\":\"0x8489c5c3964fc238b86530dfee4e210abc6e988b3f8b56a00295d9fb504a4b84\",\"urls\":[\"bzz-raw://fb95c1309cb40cb3bc6a3736c179287999efb11bb79b4323c771431db8812677\",\"dweb:/ipfs/QmQ9YkNWNFhXP6VWPSaPFKhWqLDi1F85Cuo3uHzUkvRFiu\"]},\"project:/contracts/EVATokenSale.sol\":{\"keccak256\":\"0x3608bb6958453005ccd986dbde1e766637fb3fcfde70bb60355bc1280c575549\",\"urls\":[\"bzz-raw://de1cecb19e32e9603ad37f9c900e35963a19c5b4d63e83b428c9720efc82a9df\",\"dweb:/ipfs/QmWM2kYFWqECtRaf3gQCWnxvSMedZsVXPUoYjXVmuaUXXh\"]},\"project:/contracts/KycContract.sol\":{\"keccak256\":\"0x5268ae2743f883c99698ab23182cf7b76ad1270289260181aadcc6414a18d55b\",\"urls\":[\"bzz-raw://c0dcb32602b533447e954f13778d7cd73248d1ef52badab5dff0a9bf4009995c\",\"dweb:/ipfs/QmaJ7NPrpDrcrUGG9aEUQ7xcLQQkgm6uhXtkpDSNCyrgxm\"]},\"project:/contracts/MintedCrowdsale.sol\":{\"keccak256\":\"0x083c2490d3f0f036db594a0726b5e3a14f014a9af77f2c1ae41ba54dde478352\",\"urls\":[\"bzz-raw://756380b3613cf8318eebb2ab41709f779a8a62096242e52b1f61096f8c43b659\",\"dweb:/ipfs/QmW54AosLYdEdaYkyToRvCumuC6BuigV3C3yRAiXgfKnms\"]},\"project:/contracts/MinterRole.sol\":{\"keccak256\":\"0x052e62e37c134f6b22f2ab419f3b35a73d4d9ca5af467d742294c60bb177eefe\",\"urls\":[\"bzz-raw://32ba5b3ffa000274c857cbd734b8a0a9eebc027dd367e741476539b8a1350724\",\"dweb:/ipfs/Qmbrt4b8kACRcCDVLKuXx5nLNkami1fGVsyHmJSaQFEMqs\"]},\"project:/contracts/Roles.sol\":{\"keccak256\":\"0x1191741ea374c23bb991f582c938de42c0d1456944f0c1fbee3c8e3326cabf05\",\"urls\":[\"bzz-raw://f96ac78c0b1e00f7646e7f659632a63ec972af1347d0482dd0835fa40d234fd0\",\"dweb:/ipfs/Qme2nhTVSxJ9xsMngAeWiyTC93RUEoVCz3ZxA3ENVcMsUz\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610ca4380380610ca48339818101604052608081101561003357600080fd5b810190808051906020019092919080519060200190929190805190602001909291908051906020019092919050505083838382828260016000806101000a81548160ff021916908315150217905550600083116100f8576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f43726f776473616c653a2072617465206973203000000000000000000000000081525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561017e576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526025815260200180610c7f6025913960400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610204576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610c5b6024913960400191505060405180910390fd5b8260028190555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600060016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050505080600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050610974806102e76000396000f3fe60806040526004361061004e5760003560e01c80632c4e722e1461006a5780634042b66f14610095578063521eb273146100c0578063ec8ac4d814610117578063fc0c546a1461015b57610065565b366100655761006361005e6101b2565b6101ba565b005b600080fd5b34801561007657600080fd5b5061007f610345565b6040518082815260200191505060405180910390f35b3480156100a157600080fd5b506100aa61034f565b6040518082815260200191505060405180910390f35b3480156100cc57600080fd5b506100d5610359565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101596004803603602081101561012d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ba565b005b34801561016757600080fd5b50610170610383565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600033905090565b6000809054906101000a900460ff1661023b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5265656e7472616e637947756172643a207265656e7472616e742063616c6c0081525060200191505060405180910390fd5b60008060006101000a81548160ff021916908315150217905550600034905061026482826103ac565b600061026f82610506565b90506102868260035461052490919063ffffffff16565b60038190555061029683826105ac565b8273ffffffffffffffffffffffffffffffffffffffff166102b56101b2565b73ffffffffffffffffffffffffffffffffffffffff167f6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b8484604051808381526020018281526020019250505060405180910390a361031483836105ba565b61031c6105be565b6103268383610629565b505060016000806101000a81548160ff02191690831515021790555050565b6000600254905090565b6000600354905090565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060019054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6103b6828261062d565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663df235fe4836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561045557600080fd5b505afa158015610469573d6000803e3d6000fd5b505050506040513d602081101561047f57600080fd5b8101908080519060200190929190505050610502576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4b5943206e6f7420636f6d706c65746564207965742c2061626f7274696e670081525060200191505060405180910390fd5b5050565b600061051d6002548361072e90919063ffffffff16565b9050919050565b6000808284019050838110156105a2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6105b682826107b4565b5050565b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610626573d6000803e3d6000fd5b50565b5050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156106b3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602a815260200180610915602a913960400191505060405180910390fd5b600081141561072a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f43726f776473616c653a20776569416d6f756e7420697320300000000000000081525060200191505060405180910390fd5b5050565b60008083141561074157600090506107ae565b600082840290508284828161075257fe5b04146107a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806108f46021913960400191505060405180910390fd5b809150505b92915050565b6107bc610383565b73ffffffffffffffffffffffffffffffffffffffff166340c10f1983836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561084257600080fd5b505af1158015610856573d6000803e3d6000fd5b505050506040513d602081101561086c57600080fd5b81019080805190602001909291905050506108ef576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4d696e74656443726f776473616c653a206d696e74696e67206661696c65640081525060200191505060405180910390fd5b505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f7743726f776473616c653a2062656e656669636961727920697320746865207a65726f2061646472657373a26469706673582212202fffdb465d7e140e67dde2b70fa330f689adcd2f18e5ad76ce29ba1ef6568efe64736f6c6343000602003343726f776473616c653a20746f6b656e20697320746865207a65726f206164647265737343726f776473616c653a2077616c6c657420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x60806040526004361061004e5760003560e01c80632c4e722e1461006a5780634042b66f14610095578063521eb273146100c0578063ec8ac4d814610117578063fc0c546a1461015b57610065565b366100655761006361005e6101b2565b6101ba565b005b600080fd5b34801561007657600080fd5b5061007f610345565b6040518082815260200191505060405180910390f35b3480156100a157600080fd5b506100aa61034f565b6040518082815260200191505060405180910390f35b3480156100cc57600080fd5b506100d5610359565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101596004803603602081101561012d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ba565b005b34801561016757600080fd5b50610170610383565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600033905090565b6000809054906101000a900460ff1661023b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f5265656e7472616e637947756172643a207265656e7472616e742063616c6c0081525060200191505060405180910390fd5b60008060006101000a81548160ff021916908315150217905550600034905061026482826103ac565b600061026f82610506565b90506102868260035461052490919063ffffffff16565b60038190555061029683826105ac565b8273ffffffffffffffffffffffffffffffffffffffff166102b56101b2565b73ffffffffffffffffffffffffffffffffffffffff167f6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b8484604051808381526020018281526020019250505060405180910390a361031483836105ba565b61031c6105be565b6103268383610629565b505060016000806101000a81548160ff02191690831515021790555050565b6000600254905090565b6000600354905090565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060019054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6103b6828261062d565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663df235fe4836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561045557600080fd5b505afa158015610469573d6000803e3d6000fd5b505050506040513d602081101561047f57600080fd5b8101908080519060200190929190505050610502576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4b5943206e6f7420636f6d706c65746564207965742c2061626f7274696e670081525060200191505060405180910390fd5b5050565b600061051d6002548361072e90919063ffffffff16565b9050919050565b6000808284019050838110156105a2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6105b682826107b4565b5050565b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610626573d6000803e3d6000fd5b50565b5050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156106b3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602a815260200180610915602a913960400191505060405180910390fd5b600081141561072a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260198152602001807f43726f776473616c653a20776569416d6f756e7420697320300000000000000081525060200191505060405180910390fd5b5050565b60008083141561074157600090506107ae565b600082840290508284828161075257fe5b04146107a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806108f46021913960400191505060405180910390fd5b809150505b92915050565b6107bc610383565b73ffffffffffffffffffffffffffffffffffffffff166340c10f1983836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561084257600080fd5b505af1158015610856573d6000803e3d6000fd5b505050506040513d602081101561086c57600080fd5b81019080805190602001909291905050506108ef576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4d696e74656443726f776473616c653a206d696e74696e67206661696c65640081525060200191505060405180910390fd5b505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f7743726f776473616c653a2062656e656669636961727920697320746865207a65726f2061646472657373a26469706673582212202fffdb465d7e140e67dde2b70fa330f689adcd2f18e5ad76ce29ba1ef6568efe64736f6c63430006020033",
+  "sourceMap": "91:573:11:-:0;;;163:244;8:9:-1;5:2;;;30:1;27;20:12;5:2;163:244:11;;;;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;163:244:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;336:4;342:6;350:5;459:4:14;465:6;473:5;1298:4:7;1284:11;;:18;;;;;;;;;;;;;;;;;;2578:1:8;2571:4;:8;2563:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2641:1;2623:20;;:6;:20;;;;2615:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2730:1;2704:28;;2712:5;2704:28;;;;2696:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2794:4;2786:5;:12;;;;2819:6;2809:7;;:16;;;;;;;;;;;;;;;;;;2845:5;2836:6;;:14;;;;;;;;;;;;;;;;;;2480:378;;;328:160:14;;;395:4:11::1;389:3;;:10;;;;;;;;;;;;;;;;;;163:244:::0;;;;91:573;;;;;;",
+  "deployedSourceMap": "91:573:11:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3193:23:8;3203:12;:10;:12::i;:::-;3193:9;:23::i;:::-;91:573:11;;;;;3626:77:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3626:77:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;3771:87;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3771:87:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;3447:89;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3447:89:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;4123:622;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4123:622:8;;;;;;;;;;;;;;;;;;;:::i;:::-;;3288:78;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3288:78:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;735:104:0;788:15;822:10;815:17;;735:104;:::o;4123:622:8:-;1797:11:7;;;;;;;;;;;1789:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1933:5;1919:11;;:19;;;;;;;;;;;;;;;;;;4202:17:8::1;4222:9;4202:29;;4242:44;4263:11;4276:9;4242:20;:44::i;:::-;4348:14;4365:26;4381:9;4365:15;:26::i;:::-;4348:43;;4442:25;4457:9;4442:10;;:14;;:25;;;;:::i;:::-;4429:10;:38;;;;4480:37;4497:11;4510:6;4480:16;:37::i;:::-;4563:11;4533:61;;4549:12;:10;:12::i;:::-;4533:61;;;4576:9;4587:6;4533:61;;;;;;;;;;;;;;;;;;;;;;;;4607:46;4630:11;4643:9;4607:22;:46::i;:::-;4666:15;:13;:15::i;:::-;4692:45;4714:11;4727:9;4692:21;:45::i;:::-;1949:1:7;;2107:4:::0;2093:11;;:18;;;;;;;;;;;;;;;;;;4123:622:8;:::o;3626:77::-;3663:7;3690:5;;3683:12;;3626:77;:::o;3771:87::-;3813:7;3840:10;;3833:17;;3771:87;:::o;3447:89::-;3486:15;3521:7;;;;;;;;;;;3514:14;;3447:89;:::o;3288:78::-;3326:6;3352;;;;;;;;;;;3345:13;;3288:78;:::o;415:246:11:-;519:50;546:11;559:9;519:26;:50::i;:::-;588:3;;;;;;;;;;;:16;;;605:11;588:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;588:29:11;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;588:29:11;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;588:29:11;;;;;;;;;;;;;;;;580:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;415:246;;:::o;7666:122:8:-;7733:7;7760:20;7774:5;;7760:9;:13;;:20;;;;:::i;:::-;7753:27;;7666:122;;;:::o;834:176:2:-;892:7;911:9;927:1;923;:5;911:17;;951:1;946;:6;;938:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1002:1;995:8;;;834:176;;;;:::o;6849:136:8:-;6937:40;6952:11;6965;6937:14;:40::i;:::-;6849:136;;:::o;7263:147::-;;;:::o;7880:80::-;7925:7;;;;;;;;;;;:16;;:27;7942:9;7925:27;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;7925:27:8;7880:80::o;5989:151::-;;;:::o;5298:388::-;5432:1;5409:25;;:11;:25;;;;5401:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5513:1;5500:9;:14;;5492:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5298:388;;:::o;2119:459:2:-;2177:7;2423:1;2418;:6;2414:45;;;2447:1;2440:8;;;;2414:45;2469:9;2485:1;2481;:5;2469:17;;2513:1;2508;2504;:5;;;;;;:10;2496:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2570:1;2563:8;;;2119:459;;;;;:::o;679:324:14:-;892:7;:5;:7::i;:::-;870:36;;;907:11;920;870:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;870:62:14;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;870:62:14;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;870:62:14;;;;;;;;;;;;;;;;848:147;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;679:324;;:::o",
+  "source": "pragma solidity ^0.6.0;\r\n\r\nimport \"./KycContract.sol\";\r\nimport \"./MintedCrowdsale.sol\";\r\n\r\ncontract EVATokenSale is MintedCrowdsale {\r\n\r\n    KycContract kyc;\r\n    constructor(\r\n        uint256 rate,    // rate in TKNbits\r\n        address payable wallet,\r\n        IERC20 token,\r\n        KycContract _kyc\r\n    ) \r\n        MintedCrowdsale(rate, wallet, token)\r\n        public\r\n    {\r\n        kyc = _kyc;\r\n    }\r\n\r\n    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal view override {\r\n        super._preValidatePurchase(beneficiary, weiAmount);\r\n        require(kyc.kycCompleted(beneficiary), \"KYC not completed yet, aborting\");\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\12And\\Desktop\\solidity\\TruffleReactERC20\\contracts\\EVATokenSale.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/EVATokenSale.sol",
+    "exportedSymbols": {
+      "EVATokenSale": [
+        1617
+      ]
+    },
+    "id": 1618,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1565,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "absolutePath": "project:/contracts/KycContract.sol",
+        "file": "./KycContract.sol",
+        "id": 1566,
+        "nodeType": "ImportDirective",
+        "scope": 1618,
+        "sourceUnit": 1668,
+        "src": "27:27:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/MintedCrowdsale.sol",
+        "file": "./MintedCrowdsale.sol",
+        "id": 1567,
+        "nodeType": "ImportDirective",
+        "scope": 1618,
+        "sourceUnit": 1751,
+        "src": "56:31:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1568,
+              "name": "MintedCrowdsale",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1750,
+              "src": "116:15:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MintedCrowdsale_$1750",
+                "typeString": "contract MintedCrowdsale"
+              }
+            },
+            "id": 1569,
+            "nodeType": "InheritanceSpecifier",
+            "src": "116:15:11"
+          }
+        ],
+        "contractDependencies": [
+          26,
+          1190,
+          1471,
+          1750
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1617,
+        "linearizedBaseContracts": [
+          1617,
+          1750,
+          1471,
+          1190,
+          26
+        ],
+        "name": "EVATokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1571,
+            "name": "kyc",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 1617,
+            "src": "141:15:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_KycContract_$1667",
+              "typeString": "contract KycContract"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1570,
+              "name": "KycContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1667,
+              "src": "141:11:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KycContract_$1667",
+                "typeString": "contract KycContract"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1591,
+              "nodeType": "Block",
+              "src": "378:29:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1589,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1587,
+                      "name": "kyc",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1571,
+                      "src": "389:3:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KycContract_$1667",
+                        "typeString": "contract KycContract"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1588,
+                      "name": "_kyc",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1579,
+                      "src": "395:4:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KycContract_$1667",
+                        "typeString": "contract KycContract"
+                      }
+                    },
+                    "src": "389:10:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KycContract_$1667",
+                      "typeString": "contract KycContract"
+                    }
+                  },
+                  "id": 1590,
+                  "nodeType": "ExpressionStatement",
+                  "src": "389:10:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1592,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1582,
+                    "name": "rate",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1573,
+                    "src": "336:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1583,
+                    "name": "wallet",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1575,
+                    "src": "342:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1584,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1577,
+                    "src": "350:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$873",
+                      "typeString": "contract IERC20"
+                    }
+                  }
+                ],
+                "id": 1585,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1581,
+                  "name": "MintedCrowdsale",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1750,
+                  "src": "320:15:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_MintedCrowdsale_$1750_$",
+                    "typeString": "type(contract MintedCrowdsale)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "320:36:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1580,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1573,
+                  "name": "rate",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1592,
+                  "src": "185:12:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1572,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1575,
+                  "name": "wallet",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1592,
+                  "src": "230:22:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 1574,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:15:11",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1577,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1592,
+                  "src": "263:12:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$873",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1576,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 873,
+                    "src": "263:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$873",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1579,
+                  "name": "_kyc",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1592,
+                  "src": "286:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_KycContract_$1667",
+                    "typeString": "contract KycContract"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1578,
+                    "name": "KycContract",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1667,
+                    "src": "286:11:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KycContract_$1667",
+                      "typeString": "contract KycContract"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "174:135:11"
+            },
+            "returnParameters": {
+              "id": 1586,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "378:0:11"
+            },
+            "scope": 1617,
+            "src": "163:244:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              1402
+            ],
+            "body": {
+              "id": 1615,
+              "nodeType": "Block",
+              "src": "508:153:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1603,
+                        "name": "beneficiary",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1594,
+                        "src": "546:11:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1604,
+                        "name": "weiAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1596,
+                        "src": "559:9:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1600,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -25,
+                        "src": "519:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_EVATokenSale_$1617",
+                          "typeString": "contract super EVATokenSale"
+                        }
+                      },
+                      "id": 1602,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_preValidatePurchase",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1402,
+                      "src": "519:26:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256) view"
+                      }
+                    },
+                    "id": 1605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "519:50:11",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1606,
+                  "nodeType": "ExpressionStatement",
+                  "src": "519:50:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 1610,
+                            "name": "beneficiary",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1594,
+                            "src": "605:11:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1608,
+                            "name": "kyc",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1571,
+                            "src": "588:3:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_KycContract_$1667",
+                              "typeString": "contract KycContract"
+                            }
+                          },
+                          "id": 1609,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "kycCompleted",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1666,
+                          "src": "588:16:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view external returns (bool)"
+                          }
+                        },
+                        "id": 1611,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "588:29:11",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4b5943206e6f7420636f6d706c65746564207965742c2061626f7274696e67",
+                        "id": 1612,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "619:33:11",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6978d3605ce2d38a074dac3c38b4984352f4fb8c9706976e6b0f571d068b1e4e",
+                          "typeString": "literal_string \"KYC not completed yet, aborting\""
+                        },
+                        "value": "KYC not completed yet, aborting"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6978d3605ce2d38a074dac3c38b4984352f4fb8c9706976e6b0f571d068b1e4e",
+                          "typeString": "literal_string \"KYC not completed yet, aborting\""
+                        }
+                      ],
+                      "id": 1607,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "580:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1613,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "580:73:11",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1614,
+                  "nodeType": "ExpressionStatement",
+                  "src": "580:73:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1616,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_preValidatePurchase",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 1598,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "499:8:11"
+            },
+            "parameters": {
+              "id": 1597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1594,
+                  "name": "beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1616,
+                  "src": "445:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1593,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1596,
+                  "name": "weiAmount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1616,
+                  "src": "466:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1595,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "466:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:40:11"
+            },
+            "returnParameters": {
+              "id": 1599,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "508:0:11"
+            },
+            "scope": 1617,
+            "src": "415:246:11",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1618,
+        "src": "91:573:11"
+      }
+    ],
+    "src": "0:664:11"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/EVATokenSale.sol",
+      "exportedSymbols": {
+        "EVATokenSale": [
+          1617
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 1565,
+        "name": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1668,
+          "absolutePath": "project:/contracts/KycContract.sol",
+          "file": "./KycContract.sol",
+          "scope": 1618,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1566,
+        "name": "ImportDirective",
+        "src": "27:27:11"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1751,
+          "absolutePath": "project:/contracts/MintedCrowdsale.sol",
+          "file": "./MintedCrowdsale.sol",
+          "scope": 1618,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1567,
+        "name": "ImportDirective",
+        "src": "56:31:11"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            26,
+            1190,
+            1471,
+            1750
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1617,
+            1750,
+            1471,
+            1190,
+            26
+          ],
+          "name": "EVATokenSale",
+          "scope": 1618
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "MintedCrowdsale",
+                  "referencedDeclaration": 1750,
+                  "type": "contract MintedCrowdsale"
+                },
+                "id": 1568,
+                "name": "UserDefinedTypeName",
+                "src": "116:15:11"
+              }
+            ],
+            "id": 1569,
+            "name": "InheritanceSpecifier",
+            "src": "116:15:11"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "kyc",
+              "overrides": null,
+              "scope": 1617,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract KycContract",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "KycContract",
+                  "referencedDeclaration": 1667,
+                  "type": "contract KycContract"
+                },
+                "id": 1570,
+                "name": "UserDefinedTypeName",
+                "src": "141:11:11"
+              }
+            ],
+            "id": 1571,
+            "name": "VariableDeclaration",
+            "src": "141:15:11"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "name": "",
+              "overrides": null,
+              "scope": 1617,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "rate",
+                      "overrides": null,
+                      "scope": 1592,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1572,
+                        "name": "ElementaryTypeName",
+                        "src": "185:7:11"
+                      }
+                    ],
+                    "id": 1573,
+                    "name": "VariableDeclaration",
+                    "src": "185:12:11"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "wallet",
+                      "overrides": null,
+                      "scope": 1592,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 1574,
+                        "name": "ElementaryTypeName",
+                        "src": "230:15:11"
+                      }
+                    ],
+                    "id": 1575,
+                    "name": "VariableDeclaration",
+                    "src": "230:22:11"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "token",
+                      "overrides": null,
+                      "scope": 1592,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "IERC20",
+                          "referencedDeclaration": 873,
+                          "type": "contract IERC20"
+                        },
+                        "id": 1576,
+                        "name": "UserDefinedTypeName",
+                        "src": "263:6:11"
+                      }
+                    ],
+                    "id": 1577,
+                    "name": "VariableDeclaration",
+                    "src": "263:12:11"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_kyc",
+                      "overrides": null,
+                      "scope": 1592,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract KycContract",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "KycContract",
+                          "referencedDeclaration": 1667,
+                          "type": "contract KycContract"
+                        },
+                        "id": 1578,
+                        "name": "UserDefinedTypeName",
+                        "src": "286:11:11"
+                      }
+                    ],
+                    "id": 1579,
+                    "name": "VariableDeclaration",
+                    "src": "286:16:11"
+                  }
+                ],
+                "id": 1580,
+                "name": "ParameterList",
+                "src": "174:135:11"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1586,
+                "name": "ParameterList",
+                "src": "378:0:11"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1750,
+                      "type": "type(contract MintedCrowdsale)",
+                      "value": "MintedCrowdsale"
+                    },
+                    "id": 1581,
+                    "name": "Identifier",
+                    "src": "320:15:11"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1573,
+                      "type": "uint256",
+                      "value": "rate"
+                    },
+                    "id": 1582,
+                    "name": "Identifier",
+                    "src": "336:4:11"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1575,
+                      "type": "address payable",
+                      "value": "wallet"
+                    },
+                    "id": 1583,
+                    "name": "Identifier",
+                    "src": "342:6:11"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1577,
+                      "type": "contract IERC20",
+                      "value": "token"
+                    },
+                    "id": 1584,
+                    "name": "Identifier",
+                    "src": "350:5:11"
+                  }
+                ],
+                "id": 1585,
+                "name": "ModifierInvocation",
+                "src": "320:36:11"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract KycContract"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1571,
+                              "type": "contract KycContract",
+                              "value": "kyc"
+                            },
+                            "id": 1587,
+                            "name": "Identifier",
+                            "src": "389:3:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1579,
+                              "type": "contract KycContract",
+                              "value": "_kyc"
+                            },
+                            "id": 1588,
+                            "name": "Identifier",
+                            "src": "395:4:11"
+                          }
+                        ],
+                        "id": 1589,
+                        "name": "Assignment",
+                        "src": "389:10:11"
+                      }
+                    ],
+                    "id": 1590,
+                    "name": "ExpressionStatement",
+                    "src": "389:10:11"
+                  }
+                ],
+                "id": 1591,
+                "name": "Block",
+                "src": "378:29:11"
+              }
+            ],
+            "id": 1592,
+            "name": "FunctionDefinition",
+            "src": "163:244:11"
+          },
+          {
+            "attributes": {
+              "baseFunctions": [
+                1402
+              ],
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_preValidatePurchase",
+              "scope": 1617,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "overrides": [
+                    null
+                  ]
+                },
+                "id": 1598,
+                "name": "OverrideSpecifier",
+                "src": "499:8:11"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "beneficiary",
+                      "overrides": null,
+                      "scope": 1616,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1593,
+                        "name": "ElementaryTypeName",
+                        "src": "445:7:11"
+                      }
+                    ],
+                    "id": 1594,
+                    "name": "VariableDeclaration",
+                    "src": "445:19:11"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "weiAmount",
+                      "overrides": null,
+                      "scope": 1616,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1595,
+                        "name": "ElementaryTypeName",
+                        "src": "466:7:11"
+                      }
+                    ],
+                    "id": 1596,
+                    "name": "VariableDeclaration",
+                    "src": "466:17:11"
+                  }
+                ],
+                "id": 1597,
+                "name": "ParameterList",
+                "src": "444:40:11"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1599,
+                "name": "ParameterList",
+                "src": "508:0:11"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "_preValidatePurchase",
+                              "referencedDeclaration": 1402,
+                              "type": "function (address,uint256) view"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -25,
+                                  "type": "contract super EVATokenSale",
+                                  "value": "super"
+                                },
+                                "id": 1600,
+                                "name": "Identifier",
+                                "src": "519:5:11"
+                              }
+                            ],
+                            "id": 1602,
+                            "name": "MemberAccess",
+                            "src": "519:26:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1594,
+                              "type": "address",
+                              "value": "beneficiary"
+                            },
+                            "id": 1603,
+                            "name": "Identifier",
+                            "src": "546:11:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1596,
+                              "type": "uint256",
+                              "value": "weiAmount"
+                            },
+                            "id": 1604,
+                            "name": "Identifier",
+                            "src": "559:9:11"
+                          }
+                        ],
+                        "id": 1605,
+                        "name": "FunctionCall",
+                        "src": "519:50:11"
+                      }
+                    ],
+                    "id": 1606,
+                    "name": "ExpressionStatement",
+                    "src": "519:50:11"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_6978d3605ce2d38a074dac3c38b4984352f4fb8c9706976e6b0f571d068b1e4e",
+                                  "typeString": "literal_string \"KYC not completed yet, aborting\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 1607,
+                            "name": "Identifier",
+                            "src": "580:7:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "kycCompleted",
+                                  "referencedDeclaration": 1666,
+                                  "type": "function (address) view external returns (bool)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1571,
+                                      "type": "contract KycContract",
+                                      "value": "kyc"
+                                    },
+                                    "id": 1608,
+                                    "name": "Identifier",
+                                    "src": "588:3:11"
+                                  }
+                                ],
+                                "id": 1609,
+                                "name": "MemberAccess",
+                                "src": "588:16:11"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1594,
+                                  "type": "address",
+                                  "value": "beneficiary"
+                                },
+                                "id": 1610,
+                                "name": "Identifier",
+                                "src": "605:11:11"
+                              }
+                            ],
+                            "id": 1611,
+                            "name": "FunctionCall",
+                            "src": "588:29:11"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4b5943206e6f7420636f6d706c65746564207965742c2061626f7274696e67",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"KYC not completed yet, aborting\"",
+                              "value": "KYC not completed yet, aborting"
+                            },
+                            "id": 1612,
+                            "name": "Literal",
+                            "src": "619:33:11"
+                          }
+                        ],
+                        "id": 1613,
+                        "name": "FunctionCall",
+                        "src": "580:73:11"
+                      }
+                    ],
+                    "id": 1614,
+                    "name": "ExpressionStatement",
+                    "src": "580:73:11"
+                  }
+                ],
+                "id": 1615,
+                "name": "Block",
+                "src": "508:153:11"
+              }
+            ],
+            "id": 1616,
+            "name": "FunctionDefinition",
+            "src": "415:246:11"
+          }
+        ],
+        "id": 1617,
+        "name": "ContractDefinition",
+        "src": "91:573:11"
+      }
+    ],
+    "id": 1618,
+    "name": "SourceUnit",
+    "src": "0:664:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x8A65CF9C396cb1e3b3EFf1cBD3D05cA6eCD6a715",
+      "transactionHash": "0x5d8899593a5a29bbe29ef4cf4e4bcc89b0025463b6e76ec7882d964f75997636"
+    },
+    "1337": {
+      "events": {},
+      "links": {},
+      "address": "0xFF8d2308eF6E288C741C645291b673397A323293",
+      "transactionHash": "0x581fc825c62a8efbd13b626f684f1228e4d4f398d7d467d7d725c5cb943e758e"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xC2e058A97709Ac420d667070C73fBE8f48eA0c9f",
+      "transactionHash": "0x5a8f51c7c9425807707b1d99e3a9cbef8618d4ba64c3bf2103c8b1c5a0e396f9"
+    },
+    "1654099852175": {
+      "events": {},
+      "links": {},
+      "address": "0xFF8d2308eF6E288C741C645291b673397A323293",
+      "transactionHash": "0x1ea6b4c6d20652d5d578ee24e1857f6f5a61cf1cd6446f62c7e4d1a29c139c80"
+    },
+    "1654100718286": {
+      "events": {},
+      "links": {},
+      "address": "0xFF8d2308eF6E288C741C645291b673397A323293",
+      "transactionHash": "0x1ea6b4c6d20652d5d578ee24e1857f6f5a61cf1cd6446f62c7e4d1a29c139c80"
+    }
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-03T12:48:16.096Z",
+  "devdoc": {
+    "methods": {
+      "buyTokens(address)": {
+        "details": "low level token purchase ***DO NOT OVERRIDE*** This function has a non-reentrancy guard, so it shouldn't be called by another `nonReentrant` function.",
+        "params": {
+          "beneficiary": "Recipient of the token purchase"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
